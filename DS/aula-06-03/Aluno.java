@@ -4,9 +4,9 @@ public class Aluno{
 
     //caracteristicas | atributos 
 
-    int rm;
+    private int rm;
     private String nome; 
-    String email; 
+    private String email; 
 
     //metodos | funçoes construtores
 
@@ -24,7 +24,31 @@ public class Aluno{
     public void setNome(String nome){
         this.nome = nome.toUpperCase();
     }
+  public void setRm(int rm){
+        this.rm = rm;
+    }
+    public void setEmail(String email){
+        this.email = validarEmail(email);
+    }
 
     public String getNome(){
         return nome;
     }
+
+    public int getRm(){
+        return rm; 
+    }
+    public String getEmail(){
+        return email;
+    }
+
+    public String getAll(){
+        return "Aluno Rm: " +rm+
+        "\nNome: " +nome+
+        "\nEmail : "+email ;
+    }
+
+    private String validarEmail(String email){
+        return email;
+    }
+}
