@@ -1,6 +1,7 @@
 ## Dois tipos de classe:
     * driver:
         Oq faz a classe funcionar.
+            "public static void main"
     * Objeto 
         É uma instancia da classe
 
