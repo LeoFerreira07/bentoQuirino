@@ -1,11 +1,11 @@
-## Dois tipos de classe:
+# Dois tipos de classe:
     * driver:
         Oq faz a classe funcionar.
             "public static void main"
     * Objeto 
         É uma instancia da classe
 
-## Um Objeto tem: 
+# Um Objeto tem: 
     * Caracteristicas/ atributos / propriedades
 
         ** altura
@@ -37,8 +37,8 @@
         
         ** "Oq o objeto faz"
 
-## Nao é nescessario  ter as tres caracteristicas de uma vez. 
+# Nao é nescessario  ter as tres caracteristicas de uma vez. 
 
-## Quando se cria um objeto é como se criasse um novo tipo de variavel.
+# Quando se cria um objeto é como se criasse um novo tipo de variavel.
 
-## Criar uma estancia (construtor) de objeto -> " = new Aluno() " so assim para poder prencher / definir o objeto como as caracteristicas.
+# Criar uma estancia (construtor) de objeto -> " = new Aluno() " so assim para poder prencher / definir o objeto como as caracteristicas.
