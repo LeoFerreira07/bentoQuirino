@@ -1,3 +1,4 @@
+package DS.aula0603;
 // esta é uma classe de Objeto 
 
 public class Aluno{
@@ -7,6 +8,7 @@ public class Aluno{
     private int rm;
     private String nome; 
     private String email; 
+    private Endereco endereco;
 
     //metodos | funçoes construtores
 
@@ -50,5 +52,11 @@ public class Aluno{
 
     private String validarEmail(String email){
         return email;
+    }
+    public Endereco getEndereco() {
+        return endereco;
+    }
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 }

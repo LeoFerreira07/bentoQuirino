@@ -8,6 +8,7 @@ public class Main   {
         aluno1.email = "leonardo@etec.com";
 
         Aluno aluno2 = new Aluno(20230045, "vitor", "vitor@etec.com");
-        System.out.println(aluno1.getNome());   
+        System.out.println(aluno1.getNome());  
+        System.out.println(aluno2.getNome()); 
     }
 }
