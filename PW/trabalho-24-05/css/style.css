@@ -4,41 +4,45 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Arial", sans-serif;
 }
 
 body {
 	display: flex;
 	flex-wrap: wrap;
 	flex: 1 1 100vw;
-	margin: 3px;
+	background-color: #000; /* Preto fosco */
+	color: #fff;
 }
 
-header, nav, main, aside, footer {
-	background: #a1a1a1;
-	display: flex;
-	margin: 3px;
-}
-
+/* ====== HEADER ====== */
 header {
-	height: 100px;
+	height: 80px;
 	flex: 1 1 100vw;
+	display: flex;
+	align-items: center;
+	background: #d40000; /* Vermelho Ferrari */
+	padding: 0 20px;
+	border-bottom: 2px solid #fff;
 }
 
 header #logo {
 	display: flex;
-	flex: 0 1 200px;
-	background: #c9c9c9;
-	justify-content: center;
-	align-items: center;
+	flex: 0 1 180px;
 }
 
+header #logo img {
+	height: 60px;
+}
+
+/* Botões do menu */
 #openMenu, #closeMenu {
 	border: none;
 	background: none;
-	font-size: 30px;
+	font-size: 28px;
 	font-weight: bold;
-	padding: 0px 5px;
 	cursor: pointer;
+	color: #fff;
 	display: none;
 }
 
@@ -46,35 +50,80 @@ nav {
 	justify-content: flex-end;
 	align-items: center;
 	flex: 1 1 200px;
+	display: flex;
+	gap: 40px;
 }
 
+/* Links da Navbar */
 nav a {
-	margin: 0 3%;
-	font-size: 15pt;
+	font-size: 14pt;
+	color: #fff;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: 0.3s;
+	border-bottom: 2px solid transparent;
+	letter-spacing: 1px;
 }
 
+nav a:hover {
+	color: #ffcc00; /* Dourado Ferrari */
+	border-bottom: 2px solid #ffcc00;
+}
+
+/* ====== MAIN CONTENT ====== */
 main {
-	height: calc(100vh - 224px);
+	height: calc(100vh - 200px);
 	flex: 20 1 500px;
+	background: #111; /* Preto mais suave */
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
+main h1 {
+	font-size: 32px;
+	color: #ffcc00; /* Dourado */
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+main p {
+	font-size: 16px;
+	color: #bbb;
+	max-width: 600px;
+	text-align: center;
+}
+
+/* ====== ASIDE ====== */
 aside {
 	flex: 1 1 200px;
+	background: #222;
+	color: #fff;
+	padding: 20px;
+	border-left: 2px solid #d40000;
 }
 
+/* ====== FOOTER ====== */
 footer {
-	height: 100px;
+	height: 80px;
 	flex: 1 1 100vw;
+	background: #d40000;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	border-top: 2px solid #fff;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
+/* ====== RESPONSIVO ====== */
 @media only screen and (max-width: 717px) {
 	#openMenu, #closeMenu {
 		display: block;
+		color: #fff;
 	}
 
 	#openMenu {
@@ -87,16 +136,12 @@ a {
 		top: 15px;
 	}
 
-	header {
-		order: 0;
-	}
-
 	nav {
 		order: 1;
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
-		background: rgba(255, 255, 255, 0.8);
+		background: rgba(212, 0, 0, 0.9);
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -107,21 +152,22 @@ a {
 	}
 
 	nav a {
-		margin: 3%;
+		margin: 5%;
+		font-size: 18pt;
 	}
 
 	main {
 		order: 2;
-		height: calc(100vh - 330px);
+		height: calc(100vh - 300px);
 	}
 
 	aside {
 		order: 3;
-		height: 100px;
+		height: 80px;
+		background: #111;
 	}
 
 	footer {
 		order: 4;
 	}
 }
- 	
