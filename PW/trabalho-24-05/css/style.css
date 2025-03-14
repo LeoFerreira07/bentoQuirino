@@ -30,12 +30,16 @@ header {
 }
 
 header #logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
+#logo-img {
+    height: 50px; /* Ajuste o tamanho do logo conforme necessário */
+    width: auto;  /* Mantém a proporção da imagem */
+}
 /* Links da Navbar */
 nav {
     display: flex;
@@ -64,10 +68,11 @@ main {
     overflow-y: auto; /* Permite rolagem apenas no main */
     background: #111; /* Preto mais suave */
     padding: 40px;
-    text-align: justify;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Alinha à esquerda */
+    text-align: justify; /* Justifica os textos */
+    width: 100%; /* Faz o conteúdo ocupar toda a largura */
 }
 
 main h1 {
@@ -76,12 +81,14 @@ main h1 {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left; /* Alinha à esquerda */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
 }
 
 main img {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Faz com que as imagens ocupem 100% da largura disponível */
+    max-width: 600px; /* Limita a largura máxima para 600px */
+    height: auto; /* Mantém a proporção original */
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -91,21 +98,20 @@ main h2 {
     color: #ffcc00; /* Dourado */
     margin-top: 30px;
     margin-bottom: 10px;
-    text-align: center;
-    width: 100%;
+    text-align: left; /* Alinha à esquerda */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
 }
 
 main p {
     font-size: 16px;
     color: #bbb;
-    max-width: 800px;
+    max-width: 100%; /* Garante que ocupe toda a largura */
     line-height: 1.6;
     margin-bottom: 15px;
-    text-align: center;
+    text-align: justify; /* Justifica os parágrafos */
 }
 
 iframe {
-    
     border-radius: 0px;
 }
 
@@ -125,53 +131,54 @@ footer {
 
 /* ====== RESPONSIVO ====== */
 @media only screen and (max-width: 717px) {
-	#openMenu, #closeMenu {
-		display: block;
-		color: #fff;
-	}
+    #openMenu, #closeMenu {
+        display: block;
+        color: #fff;
+    }
 
-	#openMenu {
-		margin-left: auto;
-	}
+    #openMenu {
+        margin-left: auto;
+    }
 
-	#closeMenu {
-		position: fixed;
-		right: 15px;
-		top: 15px;
-	}
+    #closeMenu {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
 
-	nav {
-		order: 1;
-		position: fixed;
-		width: 100vw;
-		height: 100vh;
-		background: rgba(212, 0, 0, 0.9);
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		margin: 0;
-		display: none;
-		opacity: 0;
-		transition: 0.3s;
-	}
+    nav {
+        order: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(212, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
 
-	nav a {
-		margin: 5%;
-		font-size: 18pt;
-	}
+    nav a {
+        margin: 5%;
+        font-size: 18pt;
+    }
 
-	main {
-		order: 2;
-		height: calc(100vh - 300px);
-	}
+    main {
+        order: 2;
+        height: calc(100vh - 300px);
+    }
 
-	aside {
-		order: 3;
-		height: 80px;
-		background: #111;
-	}
+    aside {
+        order: 3;
+        height: 80px;
+        background: #111;
+    }
 
-	footer {
-		order: 4;
-	}
+    footer {
+        order: 4;
+    }
 }
+
