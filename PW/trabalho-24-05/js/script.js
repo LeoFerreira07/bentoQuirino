@@ -1,20 +1,10 @@
-openMenu.addEventListener('click', () => {
-	menu.style.display = "flex";
-	menu.style.right = (menu.offsetWidth * -1) + 'px';
-
-	setTimeout(() => {
-		menu.style.opacity = '1';
-		menu.style.right = "0";
-		openMenu.style.display = 'none';
-	}, 10);
-});
-
-closeMenu.addEventListener('click', () => {
-	menu.style.opacity = '0';
-	menu.style.right = (menu.offsetWidth * -1) + 'px';
-
-	setTimeout(() => {
-		menu.removeAttribute('style');
-		openMenu.removeAttribute('style');
-	}, 200);
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona o footer
+    let footer = document.querySelector("footer");
+    
+    // Obtém o ano atual
+    let currentYear = new Date().getFullYear();
+    
+    // Atualiza o texto do footer com o ano atual
+    footer.textContent = `© ${currentYear} Ferrari`;
 });
